@@ -1,13 +1,13 @@
-/*===============================
+/*
         SERVICES
-================================*/
+*/
 $(function () {
     new WOW().init();
 });
 
-/*===============================
+/*
         ABOUT
-================================*/
+*/
 
 $(function () {
     $('#work').magnificPopup({
@@ -19,35 +19,23 @@ $(function () {
     });
 });
 
-/*===============================
+/*
         TEAM
-================================*/
+*/
 $(function () {
     $('.team-members').owlCarousel({
         items: 3,
         smartSpeed: 700,
         loop: true,
         autoplay: true,
-        autoplayHoverPause: true
+        autoplayHoverPause: true,
+        lazyLoad: true
     });
 });
 
-/*===============================
-        TESTIMONIALS
-================================*/
-$(function () {
-    $('#customers-testimonails').owlCarousel({
-        items: 1,
-        smartSpeed: 700,
-        loop: true,
-        autoplay: true,
-        autoplayHoverPause: true
-    });
-});
-
-/*===============================
+/*
         STATS   
-================================*/
+*/
 $(function () {
     $('.counter').counterUp({
         time: 1600,
@@ -55,40 +43,44 @@ $(function () {
     });
 });
 
-/*===============================
-        CLIENTS   
-================================*/
+/*        CLIENTS   
+*/
 $(function () {
     $('#clients-list').owlCarousel({
         items: 5,
         smartSpeed: 700,
         loop: true,
         autoplay: true,
-        autoplayHoverPause: true
+        autoplayHoverPause: true,
+        dots: true
     });
 });
 
-/*===============================
+/*
         NAVIGATION   
-================================*/
-$(function(){
-    $(window).scroll(function(){
-        if($(window).scrollTop() > 50){
+*/
+$(function () {
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 50) {
             console.log("if");
-            $('nav').addClass('vesco-nav');
-    } else{
-        $('nav').removeClass('vesco-nav');
-    }
+            $('nav').addClass('obrn-nav');
+        } else {
+            $('nav').removeClass('obrn-nav');
+        }
     });
 });
 
+
+/*
+https://github.com/kswedberg/jquery-smooth-scroll
+*/
 //Smooth Scroll Effect
-$(function(){
-    $('#nav-menu a').click(function(event){
+$(function () {
+    $('#nav-menu a').click(function (event) {
         event.preventDefault();
         let section = $(this).attr('href');
         $('html, body').animate({
-            scrollTop : $(section).offset().top - 64
+            scrollTop: $(section).offset().top - 64
         }, 1300, "easeInOutExpo");
     })
 });
