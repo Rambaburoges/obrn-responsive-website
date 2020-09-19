@@ -1,6 +1,7 @@
 /*
         SERVICES
 */
+
 $(function () {
     new WOW().init();
 });
@@ -22,6 +23,7 @@ $(function () {
 /*
         TEAM
 */
+
 $(function () {
     $('.team-members').owlCarousel({
         items: 3,
@@ -36,6 +38,7 @@ $(function () {
 /*
         STATS   
 */
+
 $(function () {
     $('.counter').counterUp({
         time: 1600,
@@ -45,6 +48,8 @@ $(function () {
 
 /*        CLIENTS   
 */
+
+
 $(function () {
     $('#clients-list').owlCarousel({
         items: 5,
@@ -52,13 +57,13 @@ $(function () {
         loop: true,
         autoplay: true,
         autoplayHoverPause: true,
-        dots: true
     });
 });
 
 /*
         NAVIGATION   
 */
+
 $(function () {
     $(window).scroll(function () {
         if ($(window).scrollTop() > 50) {
@@ -74,7 +79,9 @@ $(function () {
 /*
 https://github.com/kswedberg/jquery-smooth-scroll
 */
+
 //Smooth Scroll Effect
+
 $(function () {
     $('#nav-menu a').click(function (event) {
         event.preventDefault();
